@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Ecommerce | Prueba</title>
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <!--! Inicio Header -->
+        <header class="header">
+
+            <!-- Inicio barra de navegación -->
+            <button class="header__button_menu">
+                <img class="header__menu_img" src="./img/menu.svg" alt="Icon menu">
+            </button>
+            <nav class="header__navbar">
+                <ul class="header__ul">
+                    <li class="header__li">
+                        <a class="header__a" href="#"></a>
+                    </li>
+                    <li class="header__li">
+                        <a  class="header__a" href="#"></a>
+                        <ul class="header__sub_ul">
+                          <li class="header__sub_li"><a href="" class="header__sub_a">Categoría</a></li>
+                          <li class="header__sub_li"><a href="" class="header__sub_a">Categoría</a></li>
+                          <li class="header__sub_li"><a href="" class="header__sub_a">Categoría</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__li">
+                        <a  class="header__a" href="#"></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__buttons">
+                <button class="header__button_cart">
+                    <img class="header__cart_img" src="./img/cart.svg" alt="Icon cart">
+                </button>
+                <button class="header__button_user">
+                    <img class="header__user_img" src="./img/user.svg" alt="Icon user">
+                </button>
+            </div>
+            <!-- Final barra de navegación -->
+
+            <!--! Inicio Cart -->
+            <div class="cart">
+                <h2 class="cart__title">Tus productos</h2>
+                <div class="cart__products__container">
+                    <p class="cart__empty_p visible">Aún no has agregado productos. ¡Añade algo!</p>
+                    <img class="cart__empty_img visible" src="./img/cart-empty.png" alt="img_cart_empty">
+                    <div class="cart__products">
+                      <!-- Aquí se añaden los productos de la API a través del JavaScript -->
+                    
+                    </div>
+                    <div class="cart__actions">
+                        <div class="cart__actions_left">
+                            <button class="cart__actions_empty">Vaciar carrito</button>
+                        </div>
+                        <div class="cart__actions_right">
+                            <div class="cart__actions_total">
+                                <p class="cart__info_amount">Cantidad: 0</p>
+                                <p class="cart__info_total">Total $0</p>
+                            </div>
+                            <button class="cart__actions_buy">Comprar ahora</button>
+                        </div>
+                </div>
+                </div>
+            </div>
+            <!--! Final Cart -->
+
+        </header>
+        <!--! Final Header -->
+
+        <!--! Inicio Aside  -->
+        <aside class="aside">
+
+        </aside>
+        <!--! Final Aside  -->
+
+        <!--! Inicio Main -->
+        <main class="main">
+
+            <!-- Inicio del Header del Main -->
+            <header class="main__header">
+                <div class="main__header_degraded"></div>
+                <img class="main__header_img" src="./img/portada_1.jpg" alt="img_frond_page">
+                <div class="main__header_text">
+                    <h3 class="main__header_h3">Marcas originales</h3>
+                    <h2 class="main__header_h2">Adquiere los mejores perfumes <br> al mejor precio</h2>
+                    <input class="main__header_input" type="text" placeholder="Busca tu aroma">
+                    <a class="main__header_button" href="#">VER CATÁLOGO</a>
+                </div>
+              </header>
+            <!-- Final del Header del Main -->
+
+            <!-- Inicio de nuevos productos -->
+            <section class="main__new">
+                <h2 class="main__new_h2">NUEVOS PRODUCTOS</h2>
+                <h3 class="main__new_h3">Lagrime de sappé</h3>
+                <div class="main__new_gallery">
+                    <img class="main__new_arrow main__new_arrow-left" src="./img/arrow-left.svg" alt="Icono de flecha">
+                    <img class="main__new_img main__new_img-primary" src="./img/perfume_1.jpg" alt="perfume">
+                    <img class="main__new_img main__new_img-left" src="./img/perfume_2.jpg" alt="perfume">
+                    <img class="main__new_img main__new_img-right" src="./img/perfume_3.jpg" alt="perfume">
+                    <img class="main__new_arrow main__new_arrow-right" src="./img/arrow-right.svg" alt="Icono de flecha">
+                </div>
+            </section>
+            <!-- Final de nuevos productos -->
+
+            <!-- Inicio catálogo de productos -->
+            <section class="main__catalogue">
+                <ul class="main__catalogue_ul">
+                    <li class="main__catalogue_li active">Todos los productos</li>
+                    <li class="main__catalogue_li">Marca X</li>
+                    <li class="main__catalogue_li">Marca Y</li>
+                </ul>
+                <div class="Products">
+                    <div class="product">
+                        <img class="product__img" src="./img/producto_1.jpg" alt="Imagen de producto">
+                        <div class="product__footer">
+                            <h4 class="product__footer_h4">Nombre del producto</h4>
+                            <p class="product__footer_price">$100</p>
+                            <p class="product__footer_stock">300 Unds</p>
+                            <button class="product__footer_button">AGREGAR</button>
+                        </div>
+                    </div>                    <div class="product">
+                        <img class="product__img" src="./img/producto_2.jpg" alt="Imagen de producto">
+                        <div class="product__footer">
+                            <h4 class="product__footer_h4">Nombre del producto</h4>
+                            <p class="product__footer_price">$350</p>
+                            <p class="product__footer_stock">300 Unds</p>
+                            <button class="product__footer_button">AGREGAR</button>
+                        </div>
+                    </div>                    <div class="product">
+                        <img class="product__img" src="./img/producto_3.jpg" alt="Imagen de producto">
+                        <div class="product__footer">
+                            <h4 class="product__footer_h4">Nombre del producto</h4>
+                            <p class="product__footer_price">$200</p>
+                            <p class="product__footer_stock">300 Unds</p>
+                            <button class="product__footer_button">AGREGAR</button>
+                        </div>
+                    </div>                    <div class="product">
+                        <img class="product__img" src="./img/producto_4.jpg" alt="Imagen de producto">
+                        <div class="product__footer">
+                            <h4 class="product__footer_h4">Nombre del producto</h4>
+                            <p class="product__footer_price">$130</p>
+                            <p class="product__footer_stock">300 Unds</p>
+                            <button class="product__footer_button">AGREGAR</button>
+                        </div>
+                    </div>                    <div class="product">
+                        <img class="product__img" src="./img/producto_5.jpg" alt="Imagen de producto">
+                        <div class="product__footer">
+                            <h4 class="product__footer_h4">Nombre del producto</h4>
+                            <p class="product__footer_price">$600</p>
+                            <p class="product__footer_stock">300 Unds</p>
+                            <button class="product__footer_button">AGREGAR</button>
+                        </div>
+                    </div>                    <div class="product">
+                        <img class="product__img" src="./img/producto_6.jpg" alt="Imagen de producto">
+                        <div class="product__footer">
+                            <h4 class="product__footer_h4">Nombre del producto</h4>
+                            <p class="product__footer_price">$270</p>
+                            <p class="product__footer_stock">300 Unds</p>
+                            <button class="product__footer_button">AGREGAR</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Final catálogo de productos -->
+
+        </main>
+        <!--! Final Main -->
+
+        <!--! Inicio Footer -->
+        <footer class="footer">
+        </footer>
+        <!--! Final Footer -->
+
+        <!--! Inicio ventana modal -->
+        <section class="modal">
+            <div class="modal_product"></div>
+        </section>
+        <!--! Final ventana modal -->
+
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
