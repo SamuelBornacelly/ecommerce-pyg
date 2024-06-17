@@ -11,14 +11,48 @@ async function getApi() {
   }
 }
 function events() {
+
+  const header = document.getElementById("header");
   const header__button_cart = document.querySelector(".header__button_cart");
+  const cart__modal = document.querySelector(".cart__modal");
   const cart = document.querySelector(".cart");
+  const cart_header_close = document.querySelector(".cart_header_close");
   const modal = document.querySelector(".modal")
 
-  // Menejo de la entrada y salida del Cart en pantalla
-  header__button_cart.addEventListener("click", function () {
-    cart.classList.toggle("displacement_left");
+  // Manejo de la coloración del header al hacer scroll
+  document.addEventListener("DOMContentLoaded", () => {
+
+    function switchHeaderClass() {
+      if (window.scrollY > header.offsetTop) {
+        header.classList.add("color");
+      } else {
+        header.classList.remove("color");
+      }
+    }
+
+    switchHeaderClass();
+    window.addEventListener("scroll", switchHeaderClass);
   });
+
+  // Manejo de la entrada y salida del carrito de compras en pantalla
+  header__button_cart.addEventListener("click", () => {
+    cart__modal.style.display = "flex";
+    setTimeout(() => {
+    cart__modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    cart.style.right = 0;
+    }, 1);
+  });
+
+  // Manejo del cierre del carrito de compras
+  cart_header_close.addEventListener("click", () => {
+    cart__modal.style.backgroundColor = "rgba(0, 0, 0, 0)";
+    cart.style.right = "-390px";
+    setTimeout(() => {
+      cart__modal.style.display = "none";
+      }, 200);
+  });
+
+  // Manejo de la ventana modal para ver los detalles de los productos
   modal.addEventListener("click", function() {
     modal.classList.remove("active")
   });

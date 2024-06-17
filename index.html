@@ -11,68 +11,75 @@
     <div class="contenedor">
 
         <!--! Inicio Header -->
-        <header class="header">
+        <header id="header" class="header">
 
-            <!-- Inicio barra de navegación -->
+            <!-- Inicio barra del header -->
             <button class="header__button_menu">
-                <img class="header__menu_img" src="./img/menu.svg" alt="Icon menu">
+                <img class="header__button_menu_img" src="./img/menu.svg" alt="Icon menu">
             </button>
-            <nav class="header__navbar">
-                <ul class="header__ul">
-                    <li class="header__li">
-                        <a class="header__a" href="#"></a>
-                    </li>
-                    <li class="header__li">
-                        <a  class="header__a" href="#"></a>
-                        <ul class="header__sub_ul">
-                          <li class="header__sub_li"><a href="" class="header__sub_a">Categoría</a></li>
-                          <li class="header__sub_li"><a href="" class="header__sub_a">Categoría</a></li>
-                          <li class="header__sub_li"><a href="" class="header__sub_a">Categoría</a></li>
-                        </ul>
-                    </li>
-                    <li class="header__li">
-                        <a  class="header__a" href="#"></a>
-                    </li>
-                </ul>
-            </nav>
             <div class="header__buttons">
                 <button class="header__button_cart">
-                    <img class="header__cart_img" src="./img/cart.svg" alt="Icon cart">
+                    <img class="header__button_cart_img" src="./img/cart.svg" alt="Icon cart">
+                    <p class="header__button_cart_number"><span class="cart_number">2</span></p>
                 </button>
                 <button class="header__button_user">
-                    <img class="header__user_img" src="./img/user.svg" alt="Icon user">
+                    <img class="header__button_user_img" src="./img/user.svg" alt="Icon user">
                 </button>
             </div>
-            <!-- Final barra de navegación -->
-
-            <!--! Inicio Cart -->
-            <div class="cart">
-                <h2 class="cart__title">Tus productos</h2>
-                <div class="cart__products__container">
-                    <p class="cart__empty_p visible">Aún no has agregado productos. ¡Añade algo!</p>
-                    <img class="cart__empty_img visible" src="./img/cart-empty.png" alt="img_cart_empty">
-                    <div class="cart__products">
-                      <!-- Aquí se añaden los productos de la API a través del JavaScript -->
-                    
-                    </div>
-                    <div class="cart__actions">
-                        <div class="cart__actions_left">
-                            <button class="cart__actions_empty">Vaciar carrito</button>
-                        </div>
-                        <div class="cart__actions_right">
-                            <div class="cart__actions_total">
-                                <p class="cart__info_amount">Cantidad: 0</p>
-                                <p class="cart__info_total">Total $0</p>
-                            </div>
-                            <button class="cart__actions_buy">Comprar ahora</button>
-                        </div>
-                </div>
-                </div>
-            </div>
-            <!--! Final Cart -->
+            <!-- Final barra del header -->
 
         </header>
         <!--! Final Header -->
+
+        <!--! Inicio Cart -->
+        <div class="cart__modal">
+            <section class="cart">
+              <header class="cart__header">
+                <img class="cart_header_close" src="./img/close-cart.svg"/>
+                <h1 class="cart__header_h1">Tus productos</h1>
+              </header>
+              <main class="cart__main">
+                <!-- Aquí se insertan los productos desde main.js -->
+
+                <div class="cart__product_container">
+                    <div class="cart__product">
+                        <img class="cart__product_img" src="./img/producto_1.jpg" alt="Producto">
+                        <div class="cart__product_title">
+                            <small class="cart__product_small">Título</small>
+                            <h3 class="cart__product_h3">Nombre</h3>
+                        </div>
+                        <div class="cart__product_price">
+                            <small class="cart__product_small">Precio</small>
+                            <p class="cart__product_p">$100</p>
+                        </div>
+                        <div class="cart__product_subtotal">
+                            <small class="cart__product_small">Subtotal</small>
+                            <p class="cart__product_p">$200</p>
+                        </div>
+                    </div>
+                    <div class="cart__product_amount">
+                        <p></p>
+                        <p class=" cart__product_amount_p"><b class="b plus">+</b><span class="span">2</span><b class="b less">-</b></p>
+                        <button class="cart__product_amount_button"><img class="cart__product_amount_img delete" src="./img/trash.svg" alt="Icono"></button>
+                    </div>
+                </div>
+
+              </main>
+              <footer class="cart__footer">
+                <div class="cart__footer_info">
+                    <p class="cart__footer_info_amount"></p>
+                    <p class="cart__footer_info_total"></p>
+                </div>
+                <div class="cart__footer_buttons">
+                    <button class="cart__footer_button_delete">
+                        <img class="cart__footer_button_delete_img" src="./img/trash.svg" alt="Icono de basura">
+                    </button>
+                    <button class="cart__footer_button_buy">Comprar</button>
+                </div>
+              </footer>
+            </section>
+          </div>
+        <!--! Final Cart -->
 
         <!--! Inicio Aside  -->
         <aside class="aside">
