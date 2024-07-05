@@ -1,0 +1,27 @@
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #272525;
+    justify-content: center;
+    justify-items: center;
+}
+
+.footer div {
+    color:antiquewhite;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer h3 {
+    margin-top: 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    margin: 5px 0;
+}
