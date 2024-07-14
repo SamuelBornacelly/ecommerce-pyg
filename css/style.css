@@ -1,5 +1,5 @@
 @import "./reset.css";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"); */
 
 /** Paleta de colores */
 :root {
@@ -30,7 +30,8 @@
 
 .header__button_menu:hover,
 .header__button_cart:hover,
-.header__button_user:hover {
+.header__button_user:hover,
+.header__button_inventory:hover {
   transform: scale(1.1);
 }
 
@@ -47,11 +48,12 @@
   width: 100%;
   height: 3.5rem;
   padding: 0 5rem;
+  background-color: var(--blanco);
   transition: background-color 300ms ease;
 }
 
 .header.color {
-  background-color: var(--morado_2);
+  /* background-color: var(--morado_2); */
   box-shadow: 0 0 5px;
 }
 
@@ -65,9 +67,23 @@
   width: 2rem;
 }
 
+.header__logo {
+  width: 3.4rem;
+}
+
 .header__buttons {
   display: flex;
   gap: 1rem;
+}
+
+.header__button_inventory {
+  position: relative;
+  transition: transform 200ms ease;
+  cursor: pointer;
+}
+
+.header__button_inventory_img {
+  width: 2.5rem;
 }
 
 .header__button_cart {
@@ -77,7 +93,7 @@
 }
 
 .header__button_cart_img {
-  width: 1.8rem;
+  width: 2.5rem;
 }
 
 .header__button_cart_number {
@@ -85,9 +101,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 17px;
-  height: 17px;
-  top: -5px;
+  width: 16px;
+  height: 16px;
+  top: 0px;
   right: -5px;
   border-radius: 50%;
   color: var(--blanco);
@@ -96,7 +112,7 @@
 }
 
 .cart_number {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: 600;
 }
 
@@ -107,7 +123,7 @@
 }
 
 .header__button_user_img {
-  width: 2.5em;
+  width: 2.5rem;
 }
 
 /*! Final del Header */
@@ -400,7 +416,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-height: 520px;
+  height: 100vh;
   margin-bottom: 100px;
 }
 
@@ -414,7 +430,7 @@
 
 .main__header_img {
   width: 100%;
-  max-height: 520px;
+  height: 100%;
   border-radius: 0 0 50px 50px;
 }
 
@@ -427,22 +443,13 @@
   text-align: center;
   width: 100%;
   height: 100%;
-  /* row-gap: 1rem; */
-}
-
-.main__header_h3 {
-  width: 100%;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1em;
-  color: var(--morado_1);
+  row-gap: 2rem;
 }
 
 .main__header_h2 {
-  width: 100%;
+  width: 90%;
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 1em;
   color: var(--blanco);
 }
@@ -456,17 +463,6 @@
   font-size: 2em;
   color: var(--morado_2);
   background-color: var(--blanco);
-}
-
-.main__header_button {
-  margin-top: 1.5rem;
-  padding: 0.5rem 1rem;
-  width: 150px;
-  font-size: 1.6em;
-  line-height: 1.4rem;
-  color: var(--blanco);
-  background-color: rgb(22, 31, 148);
-  transition: 300ms ease;
 }
 
 .main__header_button:hover {
@@ -621,6 +617,17 @@
 }
 /** --- Final de catálogo de productos --- */
 
+/** --- Inicio botón de chat --- */
+.main__button_chat {
+  position: fixed;
+  width: 5rem;
+  right: 1rem;
+  bottom: 1rem;
+  cursor: pointer;
+}
+
+.main_button_chat_img {}
+/** --- Final botón de chat --- */
 
 /*! Inicio Footer */
 
