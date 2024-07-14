@@ -58,6 +58,7 @@ function events() {
   });
 
 }
+/*
 function printProducts(db) {
   const productsHTML = document.querySelector(".main__products");
   let html = "";
@@ -252,31 +253,32 @@ function modalProduct(db) {
     }
   });
 }
-
+*/
 async function main() {
+/*
   const db = {
     products: JSON.parse(window.localStorage.getItem("products")) || await getApi(),
     cart: JSON.parse(window.localStorage.getItem("cart")) || {},
   }
-
+*/
   // Se ejecutan los eventos
   events();
   // Imprimimos los productos en la página
-  printProducts(db);
+  // printProducts(db);
   // Se egregan los productos al Cart
-  addToCart(db);
+  // addToCart(db);
   // Se imprimen los productos añadidos al Cart
-  printToCart(db);
+  // printToCart(db);
   // Se gestiona el manejo de las acciones dentro del Cart
-  handleCart(db);
+  // handleCart(db);
   // Se imprime la cantidad total de productos en el carrito y la suma total a pagar
-  totalCart(db);
+  // totalCart(db);
   // Se maneja el evento de la compra
-  buyCart(db);
+  // buyCart(db);
   // Elimina todos los artículos del Cart
-  deleteCart(db);
+  // deleteCart(db);
   // Se maneja el evento de la ventana modal
-  modalProduct(db);
+  // modalProduct(db);
 
 }
 
