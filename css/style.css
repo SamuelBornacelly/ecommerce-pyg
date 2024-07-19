@@ -5,7 +5,8 @@
   --blanco: rgb(249, 250, 252);
   --gris_claro: rgb(214, 214, 214);
   --gris: rgb(77, 77, 77);
-  --gris_oscuro: rgba(34, 34, 34);
+  --gris_oscuro: rgb(34, 34, 34);
+  --negro: rgb(27, 27, 27);
   --morado_1: rgb(149, 156, 247);
   --morado_2: rgb(126, 125, 185);
   --morado_3: rgb(78, 68, 133);
@@ -158,7 +159,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 5.3rem;
+  height: 4.2rem;
   background-color: var(--morado_2);
 }
 
@@ -320,16 +321,16 @@
 }
 /** --- Final del Main del carrito --- */
 
-.cart__footer {
+/* .cart__footer {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   width: 100%;
   bottom: 0;
   padding: 10px 10px 20px 10px;
-}
+} */
 
-.cart__footer_info {
+/* .cart__footer_info {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,19 +341,19 @@
   border: 2px solid var(--gris_oscuro);
   border-radius: 10px;
   background-color: var(--blanco);
-}
+} */
 
 /* .cart__footer_info_amount {} */
 
 /* .cart__footer_info_total {} */
 
-.cart__footer_buttons {
+/* .cart__footer_buttons {
   display: flex;
   justify-content: space-between;
   width: 100%;
-}
+} */
 
-.cart__footer_button_delete {
+/* .cart__footer_button_delete {
   width: 100px;
   height: 50px;
   border-radius: 5px;
@@ -360,23 +361,23 @@
   color: var(--blanco);
   background-color: var(--rojo);
   transition: border 200ms ease,
-              color 200ms ease,
-              background-color 200ms ease;
-}
-
+  color 200ms ease,
+  background-color 200ms ease;
+} */
+/* 
 .cart__footer_button_delete:hover {
   cursor: pointer;
   border: 2px solid var(--rojo);
   color: var(--rojo);
   background-color: var(--blanco);
-}
+} */
 
-.cart__footer_button_delete_img {
+/* .cart__footer_button_delete_img {
   width: 30px;
   margin: auto;
-}
+} */
 
-.cart__footer_button_buy {
+/* .cart__footer_button_buy {
   width: 250px;
   height: 50px;
   border-radius: 5px;
@@ -385,9 +386,9 @@
   color: var(--blanco);
   background-color: var(--morado_3);
   transition: border 200ms ease,
-              color 200ms ease,
-              background-color 200ms ease;
-}
+  color 200ms ease,
+  background-color 200ms ease;
+} */
 
 .cart__footer_button_buy:hover {
   cursor: pointer;
@@ -475,7 +476,7 @@
 }
 /** --- Final del Header del Main --- */
 
-/** --- Inicio de nuevos productos --- */
+/** --- Inicio de Nuevos productos --- */
 .main__new {
   width: 100%;
 }
@@ -537,7 +538,7 @@
   transform: translate(70%, -50%);
   box-shadow: 0 5px 5px;
 }
-/** --- Final de nuevos productos --- */
+/** --- Final de Nuevos productos --- */
 
 /** --- Inicio sección Recientes ---  */
 .main__recent {
@@ -639,9 +640,10 @@
   max-width: 220px;
   padding: 1em;
   border-radius: 10px 10px 0 0;
+  transition: background-color 200ms ease;
 }
 
-.product.active {
+.product:hover {
   background-color: var(--gris_claro);
 }
 
@@ -650,7 +652,7 @@
   margin: auto;
   border-radius: 5px;
 }
-
+ 
 .product__footer {
   display: flex;
   flex-direction: column;
@@ -666,7 +668,7 @@
 .product__footer_button {
   font-size: 1rem;
   padding: 0.5em 0;
-  border: 2px solid var(--morado_2);
+  border: 2px solid var(--negro);
   background-color: var(--blanco);
   transition: 200ms ease;
   cursor: pointer;
@@ -675,20 +677,19 @@
 .product__footer_button:hover {
   color: var(--blanco);
   border-color: var(--blanco);
-  background-color: var(--morado_2);
+  background-color: var(--negro);
 }
 /** --- Final de catálogo de productos --- */
 
 /** --- Inicio botón de chat --- */
 .main__button_chat {
   position: fixed;
-  width: 5rem;
+  width: 3rem;
   right: 1rem;
   bottom: 1rem;
   cursor: pointer;
 }
 
-.main_button_chat_img {}
 /** --- Final botón de chat --- */
 
 /*! --- Inicio Footer --- */
@@ -697,7 +698,7 @@
   display: grid;
   grid-template-columns: repeat(1fr);
   color: rgb(131, 130, 130);
-  background-color: #1b1b1b;
+  background-color: var(--negro);
   padding: 2em 2em;
   gap: 20px;
 }

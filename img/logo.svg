@@ -1,0 +1,21 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="55" height="55">
+	<title>Logo PG</title>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 150px;fill: #000000;font-weight: 400;font-family: "Brygada1918-Regular", "Brygada 1918" } 
+		.t1 { font-size: 125px;fill: #000000;font-weight: 400;font-family: "Brygada1918-Regular", "Brygada 1918" } 
+		.t2 { font-size: 24px;fill: #000000;font-weight: 400;font-family: "Brygada1918-Regular", "Brygada 1918" } 
+	</style>
+	<text id="P" style="transform: matrix(1.258,0,0,1.258,13.836,-0.321)" >
+		<tspan x="0" y="110.3" class="t0">P
+</tspan>
+	</text>
+	<text id="G" style="transform: matrix(1.258,0,0,1.258,62.893,34.899)" >
+		<tspan x="0" y="91.9" class="t1">G
+</tspan>
+	</text>
+	<text id="PERFUMERÍA" style="transform: matrix(1.258,0,0,1.258,-26.415,165.717)" >
+		<tspan x="20.6" y="17.6" class="t2">P</tspan><tspan  y="17.6" class="t2">E</tspan><tspan  y="17.6" class="t2">R</tspan><tspan  y="17.6" class="t2">F</tspan><tspan  y="17.6" class="t2">U</tspan><tspan  y="17.6" class="t2">M</tspan><tspan  y="17.6" class="t2">E</tspan><tspan  y="17.6" class="t2">R</tspan><tspan  y="17.6" class="t2">Í</tspan><tspan  y="17.6" class="t2">A</tspan><tspan  y="17.6" class="t2">
+</tspan>
+	</text>
+</svg>
