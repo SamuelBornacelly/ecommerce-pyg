@@ -319,16 +319,16 @@
 }
 /** --- Final del Main del carrito --- */
 
-.cart__footer {
+/* .cart__footer {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   width: 100%;
   bottom: 0;
   padding: 10px 10px 20px 10px;
-}
+} */
 
-.cart__footer_info {
+/* .cart__footer_info {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -339,19 +339,19 @@
   border: 2px solid var(--gris_oscuro);
   border-radius: 10px;
   background-color: var(--blanco);
-}
+} */
 
 /* .cart__footer_info_amount {} */
 
 /* .cart__footer_info_total {} */
 
-.cart__footer_buttons {
+/* .cart__footer_buttons {
   display: flex;
   justify-content: space-between;
   width: 100%;
-}
+} */
 
-.cart__footer_button_delete {
+/* .cart__footer_button_delete {
   width: 100px;
   height: 50px;
   border-radius: 5px;
@@ -359,23 +359,23 @@
   color: var(--blanco);
   background-color: var(--rojo);
   transition: border 200ms ease,
-              color 200ms ease,
-              background-color 200ms ease;
-}
-
+  color 200ms ease,
+  background-color 200ms ease;
+} */
+/* 
 .cart__footer_button_delete:hover {
   cursor: pointer;
   border: 2px solid var(--rojo);
   color: var(--rojo);
   background-color: var(--blanco);
-}
+} */
 
-.cart__footer_button_delete_img {
+/* .cart__footer_button_delete_img {
   width: 30px;
   margin: auto;
-}
+} */
 
-.cart__footer_button_buy {
+/* .cart__footer_button_buy {
   width: 250px;
   height: 50px;
   border-radius: 5px;
@@ -384,9 +384,9 @@
   color: var(--blanco);
   background-color: var(--morado_3);
   transition: border 200ms ease,
-              color 200ms ease,
-              background-color 200ms ease;
-}
+  color 200ms ease,
+  background-color 200ms ease;
+} */
 
 .cart__footer_button_buy:hover {
   cursor: pointer;
@@ -603,7 +603,7 @@
   margin: auto;
   border-radius: 5px;
 }
-
+ 
 .product__footer {
   display: flex;
   flex-direction: column;
@@ -614,7 +614,7 @@
 .product__footer_h4 {
   font-size: 1.2rem;
   font-weight: 600;
-}
+} 
 
 .product__footer_price {
   font-size: 1.2rem;
@@ -622,7 +622,7 @@
 
 .product__footer_stock {
   font-size: 0.9rem;
-}
+} 
 
 .product__footer_button {
   font-size: 10px;
@@ -643,23 +643,41 @@
 /** --- Inicio botón de chat --- */
 .main__button_chat {
   position: fixed;
-  width: 5rem;
+  width: 3rem;
   right: 1rem;
   bottom: 1rem;
   cursor: pointer;
 }
 
-.main_button_chat_img {}
 /** --- Final botón de chat --- */
 
 /*! Inicio Footer */
 
 .footer {
-  width: 100%;
-  min-height: 150px;
-  background-color: var(--morado_2);
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  color: rgb(131, 130, 130);
+  background-color: var(--negro);
+  padding: 2em 2em;
+  gap: 20px;
 }
 
+.footer__container  {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.footer__column a:hover {
+  color: #ffffff;
+  
+}
+
+.footer__column {
+  display: grid;
+  gap: 5px;
+  justify-items: center;
+}
 /*! Final Footer */
 
 /*! Inicio Actives */
