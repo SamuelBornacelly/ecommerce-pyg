@@ -15,6 +15,7 @@
     --negro: #ececec;
   }
 } */
+
 /* Opcional */
 /* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
 /* Opcional */
@@ -135,15 +136,16 @@ svg {
 /* Configuramos la tipografía para toda la web */
 body {
   min-height: 100vh;
-  font-size: 10px;
+  /* Establece el alto mínimo del cuerpo al 100% del viewport */
+  font-size: 16px;
+  /* Ajusta el tamaño de fuente base a 16px (equivalente a 1rem) */
   font-family: var(--tipo-principal);
   color: var(--negro);
-  /* opcional */
-  line-height: 1.4em;
-  /* opcional */
-  font-smooth: always;
-  /* opcional */
+
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+
   -webkit-font-smoothing: antialiased;
-  /* opcional */
   -moz-osx-font-smoothing: grayscale;
+
 }
