@@ -13,20 +13,20 @@ async function getApi() {
 function events() {
 
   const header = document.getElementById("header");
-  const header__button_cart = document.querySelector(".header__button_cart");
+  const cart_button = document.getElementById("cart_button");
   const cart__modal = document.querySelector(".cart__modal");
   const cart = document.querySelector(".cart");
   const cart_header_close = document.querySelector(".cart_header_close");
   const modal = document.querySelector(".modal")
 
-  // Manejo de la coloración del header al hacer scroll
+  // Manejo del sombreado del header al hacer scroll
   document.addEventListener("DOMContentLoaded", () => {
 
     function switchHeaderClass() {
       if (window.scrollY > header.offsetTop) {
-        header.classList.add("color");
+        header.classList.add("shadow");
       } else {
-        header.classList.remove("color");
+        header.classList.remove("shadow");
       }
     }
 
@@ -35,7 +35,7 @@ function events() {
   });
 
   // Manejo de la entrada y salida del carrito de compras en pantalla
-  header__button_cart.addEventListener("click", () => {
+  cart_button.addEventListener("click", () => {
     cart__modal.style.display = "flex";
     setTimeout(() => {
     cart__modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";

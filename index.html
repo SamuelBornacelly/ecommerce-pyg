@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./img/black_logo.svg">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Ecommerce | Prueba</title>
+    <title>Perfumería P&G</title>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
 
@@ -17,17 +19,17 @@
             <button class="header__button_menu">
                 <img class="header__button_menu_img" src="./img/menu.svg" alt="Icon menu">
             </button>
-            <img class="header__logo" src="./img/logo.svg" alt="logo">
+            <img class="header__logo" src="./img/black_logo.svg" alt="logo">
             <div class="header__buttons">
-                <button class="header__button_inventory">
-                    <img class="header__button_inventory_img" src="./img/inventory.png" alt="Icon inventory">
+                <button class="header__button">
+                    <img class="header__button_img" src="./img/inventory.png" alt="Icon inventory">
                 </button>
-                <button class="header__button_cart">
-                    <img class="header__button_cart_img" src="./img/cart.png" alt="Icon cart">
+                <button id="cart_button" class="header__button">
+                    <img class="header__button_img" src="./img/cart.png" alt="Icon cart">
                     <p class="header__button_cart_number"><span class="cart_number">2</span></p>
                 </button>
-                <button class="header__button_user">
-                    <img class="header__button_user_img" src="./img/user.png" alt="Icon user">
+                <button class="header__button">
+                    <img class="header__button_img" src="./img/user.png" alt="Icon user">
                 </button>
             </div>
             <!-- Final barra del header -->
@@ -38,51 +40,49 @@
         <!--! Inicio Cart -->
         <div class="cart__modal">
             <section class="cart">
-              <header class="cart__header">
-                <img class="cart_header_close" src="./img/close-cart.svg"/>
-                <h1 class="cart__header_h1">Tus productos</h1>
-              </header>
-              <main class="cart__main">
-                <!-- Aquí se insertan los productos desde main.js -->
+                <header class="cart__header">
+                    <img class="cart_header_close" src="./img/close-cart.svg"/>
+                    <h1 class="cart__header_h1">Tus productos</h1>
+                </header>
+                <main class="cart__main">
+                    <!-- Aquí se insertan los productos desde main.js -->
 
-                <div class="cart__product_container">
-                    <div class="cart__product">
-                        <img class="cart__product_img" src="./img/producto_1.jpg" alt="Producto">
-                        <div class="cart__product_title">
-                            <small class="cart__product_small">Título</small>
-                            <h3 class="cart__product_h3">Nombre</h3>
+                    <div class="cart__product_container">
+                        <div class="cart__product">
+                            <img class="cart__product_img" src="./img/producto_1.jpg" alt="Producto">
+                            <div class="cart__product_title">
+                                <small class="cart__product_small">Título</small>
+                                <h3 class="cart__product_h3">Nombre</h3>
+                            </div>
+                            <div class="cart__product_price">
+                                <small class="cart__product_small">Precio</small>
+                                <p class="cart__product_p">$100</p>
+                            </div>
+                            <div class="cart__product_subtotal">
+                                <small class="cart__product_small">Subtotal</small>
+                                <p class="cart__product_p">$200</p>
+                            </div>
                         </div>
-                        <div class="cart__product_price">
-                            <small class="cart__product_small">Precio</small>
-                            <p class="cart__product_p">$100</p>
-                        </div>
-                        <div class="cart__product_subtotal">
-                            <small class="cart__product_small">Subtotal</small>
-                            <p class="cart__product_p">$200</p>
+                        <div class="cart__product_amount">
+                            <p></p>
+                            <p class=" cart__product_amount_p"><b class="b plus">+</b><span class="span">2</span><b class="b less">-</b></p>
+                            <button class="cart__product_amount_button"><img class="cart__product_amount_img delete" src="./img/trash.svg" alt="Icono"></button>
                         </div>
                     </div>
-                    <div class="cart__product_amount">
-                        <p></p>
-                        <p class=" cart__product_amount_p"><b class="b plus">+</b><span class="span">2</span><b class="b less">-</b></p>
-                        <button class="cart__product_amount_button"><img class="cart__product_amount_img delete" src="./img/trash.svg" alt="Icono"></button>
-                    </div>
-                </div>
 
-              </main>
-              <footer class="cart__footer">
-                <div class="cart__footer_info">
-                    <p class="cart__footer_info_amount"></p>
-                    <p class="cart__footer_info_total"></p>
-                </div>
-                <div class="cart__footer_buttons">
-                    <button class="cart__footer_button_delete">
-                        <img class="cart__footer_button_delete_img" src="./img/trash.svg" alt="Icono de basura">
-                    </button>
-                    <button class="cart__footer_button_buy">Comprar</button>
-                </div>
-              </footer>
+                </main>
+                <footer class="cart__footer">
+                    <div class="cart__footer_info">
+                        <p class="cart__footer_info_amount"></p>
+                        <p class="cart__footer_info_total"></p>
+                    </div>
+                    <div class="cart__footer_buttons">
+                        <button class="cart__footer_button_delete">Vaciar</button>
+                        <button class="cart__footer_button_buy">Comprar</button>
+                    </div>
+                </footer>
             </section>
-          </div>
+        </div>
         <!--! Final Cart -->
 
         <!--! Inicio Aside  -->
@@ -105,38 +105,24 @@
             </header>
             <!-- Final del Header del Main -->
 
-            <!-- Inicio de nuevos productos -->
-            <!--? <section class="main__new">
-                <h2 class="main__new_h2">NUEVOS PRODUCTOS</h2>
-                <h3 class="main__new_h3">Lagrime de sappé</h3>
-                <div class="main__new_gallery">
-                    <img class="main__new_arrow main__new_arrow-left" src="./img/arrow-left.svg" alt="Icono de flecha">
-                    <img class="main__new_img main__new_img-primary" src="./img/perfume_1.jpg" alt="perfume">
-                    <img class="main__new_img main__new_img-left" src="./img/perfume_2.jpg" alt="perfume">
-                    <img class="main__new_img main__new_img-right" src="./img/perfume_3.jpg" alt="perfume">
-                    <img class="main__new_arrow main__new_arrow-right" src="./img/arrow-right.svg" alt="Icono de flecha">
-                </div>
-            </section> -->
-            <!-- Final de nuevos productos -->
-
             <!-- Inicio sección Recientes -->
-            <section class="main__recent">
-                <h2 class="main__recent_h2">RECIENTES</h2>
-                <div class="main__recent_gallery">
-                    <img class="main__recent_img" src="./img/fragancia_1.jpg" alt="Perfume">
-                    <img class="main__recent_img" src="./img/fragancia_2.jpg" alt="Perfume">
-                    <img class="main__recent_img" src="./img/fragancia_3.jpg" alt="Perfume">
+            <section class="main__section">
+                <h2 class="main__section_h2">RECIENTES</h2>
+                <div class="main__section_gallery">
+                    <img class="main__section_img" src="./img/fragancia_1.jpg" alt="Perfume">
+                    <img class="main__section_img" src="./img/fragancia_2.jpg" alt="Perfume">
+                    <img class="main__section_img" src="./img/fragancia_3.jpg" alt="Perfume">
                 </div>
             </section>
             <!-- Final sección Recientes -->
 
             <!-- Inicio sección Nuevas -->
-            <section class="main__news">
-                <h2 class="main__news_h2">NUEVAS</h2>
-                <div class="main__news_gallery">
-                    <img class="main__news_img" src="./img/fragancia_4.jpg" alt="Perfume">
-                    <img class="main__news_img" src="./img/fragancia_5.jpg" alt="Perfume">
-                    <img class="main__news_img" src="./img/fragancia_6.jpg" alt="Perfume">
+            <section class="main__section">
+                <h2 class="main__section_h2">NUEVAS</h2>
+                <div class="main__section_gallery">
+                    <img class="main__section_img" src="./img/fragancia_4.jpg" alt="Perfume">
+                    <img class="main__section_img" src="./img/fragancia_5.jpg" alt="Perfume">
+                    <img class="main__section_img" src="./img/fragancia_6.jpg" alt="Perfume">
                 </div>
             </section>
             <!-- Inicio sección Nuevas -->
@@ -222,6 +208,5 @@
 
     </div>
 
-    <script src="./js/main.js"></script>
 </body>
 </html>
