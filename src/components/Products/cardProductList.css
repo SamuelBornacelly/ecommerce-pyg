@@ -1,0 +1,21 @@
+.main__section {
+    margin-bottom: 100px;
+}
+
+.main__section_h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2em;
+}
+
+.main__section_gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 850px) {
+    .main__section_gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}

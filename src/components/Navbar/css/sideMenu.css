@@ -1,0 +1,15 @@
+.sideMenu {
+    position: absolute;
+    width: 3em;
+    height: 2.5em;
+    position: relative;
+    text-align: center;
+}
+.menuButton{
+    width: 100%;
+    height: 100%;
+}
+
+.menuList{
+    padding: 2em;
+}
