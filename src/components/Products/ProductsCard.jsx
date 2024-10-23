@@ -5,16 +5,29 @@
  * Proprietary and confidential
  */
 
-import { Box, Flex, Grid, Image, SmallCloseIcon, Text } from "@chakra-ui/icons";
+import {
+  Box,
+  Button,
+  Divider,
+  Flex,
+  Grid,
+  Image,
+  SmallCloseIcon,
+  Text,
+} from "@chakra-ui/icons";
 import React from "react";
+import { IoCartOutline } from "react-icons/io5";
 
-const ProductsCard = ({ product, addToCart, hasDescription = true, widthImg, heightImg}) => {
+const ProductsCard = ({
+  product,
+  addToCart,
+  hasDescription = false,
+  widthImg,
+  heightImg,
+}) => {
   return (
-    <Grid className="cart__modal">
-      <Box className="cart__product_title">
-        <Text fontSize="md" fontWeight="bold">
-          {"Susurros de Noche"}
-        </Text>
+    <Grid w="30%" h="30%">
+      <Box margin="2">
         <Image
           width={widthImg}
           height={heightImg}
@@ -25,18 +38,26 @@ const ProductsCard = ({ product, addToCart, hasDescription = true, widthImg, hei
           alt=""
         />
       </Box>
-      {hasDescription && (
-        <Text fontSize="md">
-          {
-            "Susurros de Noche es un perfume que captura la esencia de una velada mágica. Es ideal para una noche de gala o una cena romántica, evocando emociones y dejando una impresión duradera. Perfecto para quienes buscan una fragancia que combine frescura y sensualidad."
-          }
+      <Box margin="2">
+        <Text fontSize="md" fontWeight="bold">
+          {"Susurros de Noche"} {"100"}ml
         </Text>
-      )}
-      <Box className="cart__product_price" textAlign="center">
-        <Text fontSize="lg" fontWeight="bold" color="blue.600">
-          Precio {"123.000"}
-        </Text>
+        {hasDescription && (
+          <Text fontSize="md">
+            {
+              "Susurros de Noche es un perfume que captura la esencia de una velada mágica. Es ideal para una noche de gala o una cena romántica, evocando emociones y dejando una impresión duradera. Perfecto para quienes buscan una fragancia que combine frescura y sensualidad."
+            }
+          </Text>
+        )}
+
+        <Text fontSize="md">Precio {"123.000"}</Text>
+
+        <Button gap="3" margin="2">
+          <IoCartOutline />
+          Añadir al carrito
+        </Button>
       </Box>
+      <Divider orientation="vertical"  />
     </Grid>
   );
 };

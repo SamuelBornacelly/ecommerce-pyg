@@ -7,22 +7,39 @@
 
 import React from "react";
 import ProductsCard from "./productsCard";
+import { CardHeader, Flex, Grid, Heading } from "@chakra-ui/react";
 
 const ProductsCardList = ({ products, addToCart }) => {
   return (
-    <main className="main">
-      <h2>Products</h2>
-      <div className="products">
-        {/* {products.map((product) => (
-          <ProductsCard
-            key={product.id}
-            product={product}
-            addToCart={addToCart}
-          />
-        ))} */}
-        <ProductsCard product={0} addToCart={true} />
-      </div>
-    </main>
+    <Grid gap={4} textAlign="center" p="20">
+      <Heading as="h3" size="lg" fontFamily="fantasy">
+        Perfumes recientes
+      </Heading>
+      <Grid
+        templateColumns="repeat(3, 1fr)"
+        width="full"
+        height="400px"
+        overflowX="auto"
+      >
+        <ProductsCard />
+        <ProductsCard />
+        <ProductsCard />
+      </Grid>
+      <Heading as="h3" size="lg" fontFamily="fantasy">
+        Perfumes nuevos
+      </Heading>
+      <Grid
+        templateColumns="repeat(3, 1fr)"
+        justifyContent="center"
+        alignContent="center"
+        width="full"
+        height="400px"
+      >
+        <ProductsCard />
+        <ProductsCard />
+        <ProductsCard />
+      </Grid>
+    </Grid>
   );
 };
 

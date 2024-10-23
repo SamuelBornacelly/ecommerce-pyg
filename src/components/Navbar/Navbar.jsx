@@ -16,13 +16,13 @@ import { SideMenu } from "./SideMenu";
 import { LoginForm } from "./LoginForm";
 
 export const Navbar = () => {
-  const [showCard, setShowCard] = useState(false);
+  const [activeCard, setActiveCard] = useState(null);
 
-  const toggleCard = () =>{
-    setShowCard(!showCard)
-  }
+  const toggleCard = (card) => {
+    setActiveCard(activeCard === card ? null : card);
+  };
 
-
+  
   return (
     <Flex className="navbar">
       <SideMenu />
@@ -32,30 +32,43 @@ export const Navbar = () => {
         alt="Logo perfumeria PyG"
       ></Image>
       <Flex>
-        <Button background="white" size="lg" onClick={toggleCard}>
+        <Button
+          background="white"
+          size="lg"
+          onClick={() => toggleCard("Inventory")}
+        >
           <img
             className="navbar__button_img"
             src="./img/inventory.png"
             alt="Icon inventory"
           />
         </Button>
-        <Button background="white" size="lg" onClick={toggleCard}>
+        <Button
+          background="white"
+          size="lg"
+          onClick={() => toggleCard("shopping")}
+        >
           <img
             className="navbar__button_img"
             src="./img/cart.png"
             alt="Icon cart"
           />
         </Button>
-        <Button background="white" size="lg" onClick={toggleCard}>
+        <Button
+          background="white"
+          size="lg"
+          onClick={() => toggleCard("profile")}
+        >
           <img
             className="navbar__button_img"
             src="./img/user.png"
             alt="Icon user"
           ></img>
         </Button>
-        {toggleCard && <LoginForm />}
-        {toggleCard && <ShoppingCart />}
       </Flex>
+      {activeCard === "profile" && <LoginForm />}
+      {activeCard === "shopping" && <ShoppingCart />}
+      {activeCard === "Inventory" && <InventoryDropdown />}
     </Flex>
   );
 };

@@ -24,14 +24,16 @@ export const LoginForm = () => {
 
   return (
     <Grid
-      maxW="sm"
-      mt="500px"
+      mt="30%"
       p="6"
       borderWidth="1px"
       borderRadius="lg"
       background="white"
+      position="fixed"
+      gap="3"
+      ml="81em"
     >
-      <Heading as="h2" size="md" mt="20" textAlign="center">
+      <Heading as="h2" size="md" my="5" textAlign="center">
         Iniciar Sesión en perfumería P&G
       </Heading>
       <form onSubmit={handleSubmit}>

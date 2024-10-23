@@ -1,3 +1,8 @@
+.mainProductsList{
+    display: flex;
+    flex-direction: column;
+}
+
 .main__section {
     margin-bottom: 100px;
 }
