@@ -6,14 +6,12 @@
  */
 import { Box, Button, Flex, Grid, Image, MenuButton } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { ProfileDropdown } from "./ProfileDropdown";
 import { InventoryDropdown } from "./InventoryDropdown";
 import { ShoppingCart } from "./ShoppingCart";
 import "./css/Navbar.css";
 import { SideMenu } from "./SideMenu";
 import { LoginForms } from "./LoginForms";
-import { AppRoute } from "../../../Utils/AppRouter";
-import { useNavigate } from "react-router";
+import { Link} from "react-router";
 
 export const Navbar = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -22,45 +20,29 @@ export const Navbar = () => {
     setActiveCard(activeCard === card ? null : card);
   };
 
-  const navigate = useNavigate();
-
-  //hay que modificar el navigate porque enta renderizando mal 
 
   return (
     <Flex className="navbar">
       <SideMenu />
-      <Button
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        background="transparent"
-        onClick={() =>{navigate(AppRoute.Base)
-          console.log("si esta funcionando aqui ")
-        }}
-      >
+      <Link to="/">
         <Image
-          // className="header__logo"
           display="block"
           margin="0 auto"
-          boxSize="150%"
+          boxSize="25%"
           src="../../../img/logo.png"
           alt="Logo perfumeria PyG"
-          _hover="none"
         ></Image>
-      </Button>
-      <Flex>
-        <Button
-          background="white"
-          size="lg"
-          onClick={
-            navigate(AppRoute.Inventory)}
-        >
+      </Link>
+
+      <Flex >
+        <Link to="/inventory">
           <img
             className="navbar__button_img"
             src="./img/inventory.png"
             alt="Icon inventory"
           />
-        </Button>
+        </Link>
+
         <Button
           background="white"
           size="lg"
