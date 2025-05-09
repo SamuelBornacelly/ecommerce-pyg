@@ -41,9 +41,9 @@ const InventoryPage = () => {
   }
 
   return (
-    <Box p={6}>
+    <Box p={100}>
       {/* Barra de búsqueda */}
-      <Input placeholder="Buscar..." mb={6} />
+      <Input placeholder="Buscar..." mb={25} />
 
       <Flex direction={{ base: "column", md: "row" }} gap={8}>
         {/* Sección de Filtros */}

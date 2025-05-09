@@ -1,10 +1,18 @@
 import React from "react";
 import './footer.css';
+import { Grid } from "@chakra-ui/react";
 
 export const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer__container">
+      <Grid
+        templateColumns={{
+          base: "1fr",
+          sm: "repeat(3, 1fr)",
+          md: "repeat(3, 1fr)",
+        }}
+        gap={6}
+      >
         <ul className="footer__column">
           <li>
             <strong>Acerca de nosotros:</strong>
@@ -46,7 +54,7 @@ export const Footer = () => {
             <a href="#Politica-cookies">Politica de cookies</a>
           </li>
         </ul>
-      </div>
+      </Grid>
       <p>© 2024 Perfumeria P&G. Todos los derechos reservados.</p>
     </footer>
   );

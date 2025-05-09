@@ -18,21 +18,21 @@ const Header = ({ cart }) => {
   );
 
   return (
-    <div class="main__header">
+    <div className="main__header">
       <img
-        class="main__header_img"
+        className="main__header_img"
         src="./img/portada_1.jpg"
         alt="img_frond_page"
       ></img>
-      <div class="main__header_text">
-        <h2 class="main__header_h2">
+      <div className="main__header_text">
+        <h2 className="main__header_h2">
           Descubre tu aroma perfecto, ¡Tu aroma, tu firma!
         </h2>
         <br />
       </div>
       <div>
         <input
-          class="main__header_input"
+          className="main__header_input"
           type="text"
           placeholder="Busca tu fragancia"
         ></input>

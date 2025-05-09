@@ -11,7 +11,7 @@ import { ShoppingCart } from "./ShoppingCart";
 import "./css/Navbar.css";
 import { SideMenu } from "./SideMenu";
 import { LoginForms } from "./LoginForms";
-import { Link} from "react-router";
+import { Link } from "react-router";
 
 export const Navbar = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -19,7 +19,6 @@ export const Navbar = () => {
   const toggleCard = (card) => {
     setActiveCard(activeCard === card ? null : card);
   };
-
 
   return (
     <Flex className="navbar">
@@ -34,14 +33,19 @@ export const Navbar = () => {
         ></Image>
       </Link>
 
-      <Flex >
-        <Link to="/inventory">
-          <img
-            className="navbar__button_img"
-            src="./img/inventory.png"
-            alt="Icon inventory"
-          />
-        </Link>
+      <Flex>
+        <Button
+          background="white"
+          size="lg"
+        >
+          <Link to="/inventory">
+            <img
+              className="navbar__button_img"
+              src="./img/inventory.png"
+              alt="Icon inventory"
+            />
+          </Link>
+        </Button>
 
         <Button
           background="white"
